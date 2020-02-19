@@ -46,6 +46,13 @@ class TableViewController: UITableViewController {
         cell.detailTextLabel?.text = petition.body
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsVC = DetailsViewController()
+        detailsVC.detailItem = petitions[indexPath.row]
+        navigationController?.pushViewController(detailsVC, animated: true)
+        //here we didn't use instantiate VC because we didn't add the details VC in storyboard
+    }
 
 }
 

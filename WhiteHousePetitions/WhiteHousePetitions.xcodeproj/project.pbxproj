@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		A4EFA81C23FD594400E061EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EFA81B23FD594400E061EE /* AppDelegate.swift */; };
 		A4EFA81E23FD594400E061EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EFA81D23FD594400E061EE /* SceneDelegate.swift */; };
-		A4EFA82023FD594400E061EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EFA81F23FD594400E061EE /* ViewController.swift */; };
+		A4EFA82023FD594400E061EE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EFA81F23FD594400E061EE /* TableViewController.swift */; };
 		A4EFA82323FD594400E061EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4EFA82123FD594400E061EE /* Main.storyboard */; };
 		A4EFA82523FD594A00E061EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4EFA82423FD594A00E061EE /* Assets.xcassets */; };
 		A4EFA82823FD594A00E061EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4EFA82623FD594A00E061EE /* LaunchScreen.storyboard */; };
+		A4EFA83023FD6B7A00E061EE /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EFA82F23FD6B7A00E061EE /* Petitions.swift */; };
+		A4EFA83223FD6BC200E061EE /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EFA83123FD6BC200E061EE /* Petition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A4EFA81823FD594400E061EE /* WhiteHousePetitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteHousePetitions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EFA81B23FD594400E061EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4EFA81D23FD594400E061EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4EFA81F23FD594400E061EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4EFA81F23FD594400E061EE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A4EFA82223FD594400E061EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4EFA82423FD594A00E061EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4EFA82723FD594A00E061EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4EFA82923FD594A00E061EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4EFA82F23FD6B7A00E061EE /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		A4EFA83123FD6BC200E061EE /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				A4EFA81B23FD594400E061EE /* AppDelegate.swift */,
 				A4EFA81D23FD594400E061EE /* SceneDelegate.swift */,
-				A4EFA81F23FD594400E061EE /* ViewController.swift */,
+				A4EFA81F23FD594400E061EE /* TableViewController.swift */,
 				A4EFA82123FD594400E061EE /* Main.storyboard */,
 				A4EFA82423FD594A00E061EE /* Assets.xcassets */,
 				A4EFA82623FD594A00E061EE /* LaunchScreen.storyboard */,
 				A4EFA82923FD594A00E061EE /* Info.plist */,
+				A4EFA82F23FD6B7A00E061EE /* Petitions.swift */,
+				A4EFA83123FD6BC200E061EE /* Petition.swift */,
 			);
 			path = WhiteHousePetitions;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4EFA82023FD594400E061EE /* ViewController.swift in Sources */,
+				A4EFA83223FD6BC200E061EE /* Petition.swift in Sources */,
+				A4EFA82023FD594400E061EE /* TableViewController.swift in Sources */,
+				A4EFA83023FD6B7A00E061EE /* Petitions.swift in Sources */,
 				A4EFA81C23FD594400E061EE /* AppDelegate.swift in Sources */,
 				A4EFA81E23FD594400E061EE /* SceneDelegate.swift in Sources */,
 			);

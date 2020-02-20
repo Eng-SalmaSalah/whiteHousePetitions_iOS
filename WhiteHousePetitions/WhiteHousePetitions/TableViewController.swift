@@ -14,6 +14,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getPetitions()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(getCredits))
         
         // Do any additional setup after loading the view.
     }
@@ -32,6 +33,12 @@ class TableViewController: UITableViewController {
             }
         }
         showError()
+    }
+    
+    @objc func getCredits(){
+        let ac = UIAlertController(title: "Credits", message: "These Petitions Come From \n WE THE PEOPLE API \n of the white house", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "ok", style: .cancel))
+        present(ac,animated: true)
     }
     
     func parse(data:Data){

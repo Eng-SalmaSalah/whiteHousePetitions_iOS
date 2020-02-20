@@ -17,7 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // This gets called by iOS when the app has finished loading and is ready to be used
+        //here we will add another tab to the tabbarcontroller because it is not good idea to add it in storyboard as both will have tableVC with petitions so it is redundancy
+               
+        if let tabbarController = window?.rootViewController as? UITabBarController{
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let mostPopularPetitionsTableVC = storyBoard.instantiateViewController(withIdentifier: "NavController")
+            mostPopularPetitionsTableVC.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 1)
+            tabbarController.viewControllers?.append(mostPopularPetitionsTableVC)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

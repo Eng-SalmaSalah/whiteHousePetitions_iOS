@@ -14,16 +14,24 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getPetitions()
+        
         // Do any additional setup after loading the view.
     }
     
     func getPetitions(){
-        let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+        var urlString:String
+        if navigationController?.tabBarItem.tag == 0{
+            urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+        }else{
+            urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
+        }
         if let url = URL(string: urlString){
             if let data = try? Data(contentsOf: url){
                 parse(data: data)
+                return
             }
         }
+        showError()
     }
     
     func parse(data:Data){
@@ -33,6 +41,12 @@ class TableViewController: UITableViewController {
             petitions = jsonPetitions.results
             tableView.reloadData()
         }
+    }
+    
+    func showError(){
+        let ac = UIAlertController(title: "Loading error", message: "Cannot load petitions right now please check you internet connection", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        present(ac,animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

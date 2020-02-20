@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let mostPopularPetitionsVC = storyBoard.instantiateViewController(withIdentifier: "NavController")
             mostPopularPetitionsVC.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 1)
-            tabbarController.viewControllers?.append(mostPopularPetitionsTableVC)
+            tabbarController.viewControllers?.append(mostPopularPetitionsVC)
         }
     }
 
